@@ -1,24 +1,63 @@
-# README
+## 目次
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. [プロジェクト名](#プロジェクト名)
+2. [プロジェクトについて](#プロジェクトについて)
+3. [環境](#環境)
+4. [開発環境構築](#開発環境構築)
+5. [コンテナ作成・起動](#コンテナ作成・起動)
+6. [動作確認](#動作確認)
+7. [コンテナの停止](#コンテナの停止)
 
-Things you may want to cover:
+## プロジェクト名
 
-* Ruby version
+rails-docker
 
-* System dependencies
+## プロジェクトについて
 
-* Configuration
+Docker のコンポーネント上で Ruby on Rails を立ち上げます
 
-* Database creation
+## 環境
 
-* Database initialization
+| 言語・フレームワーク | バージョン |
+| -------------------- | ---------- |
+| Ruby                 | 3.2.2      |
+| Ruby on rails        | 7.0.6      |
+| PostgresSQL          | 12         |
 
-* How to run the test suite
+その他のパッケージのバージョンは Gemfile を参照してください。
 
-* Services (job queues, cache servers, search engines, etc.)
+## 開発環境構築
 
-* Deployment instructions
+```
+git clone git@github.com:umedanaoyuki/rails-docker.git
+```
 
-* ...
+### コンテナ作成・起動
+
+```
+### コンテナ作成＆起動
+docker-compose up
+
+### -d をつけるとバックグラウンドでコンテナを立ち上げ可能
+docker-compose up -d
+```
+
+```
+### 起動中のコンテナの確認
+docker-compose ps
+```
+
+### 動作確認
+
+http://localhost:3000 にアクセスできるか確認
+アクセスできたら成功
+
+### コンテナの停止
+
+```
+### コンテナの停止(停止するだけ)
+docker-compose stop
+
+### ストップして停止＆削除
+docker-compose down
+```
