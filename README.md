@@ -38,7 +38,7 @@ git clone git@github.com:umedanaoyuki/rails-docker.git
 ### コンテナ作成＆起動
 docker-compose up
 
-### -d をつけるとバックグラウンドでコンテナを立ち上げ可能
+### -d をつけるとバックグラウンドでコンテナを立ち上げ可能です。
 docker-compose up -d
 ```
 
@@ -49,8 +49,8 @@ docker-compose ps
 
 ### 動作確認
 
-http://localhost:3000 にアクセスできるか確認
-アクセスできたら成功
+http://localhost:3000 にアクセスできるか確認  
+アクセスできたら成功です。
 
 ### コンテナの停止
 
@@ -58,6 +58,6 @@ http://localhost:3000 にアクセスできるか確認
 ### コンテナの停止(停止するだけ)
 docker-compose stop
 
-### ストップして停止＆削除
+### ストップして停止＆コンテナも削除
 docker-compose down
 ```
