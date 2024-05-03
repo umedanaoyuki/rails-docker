@@ -37,15 +37,29 @@ git clone git@github.com:umedanaoyuki/rails-docker.git
 
 ```
 # コンテナ作成＆起動
-docker-compose up
-
-# -d をつけるとバックグラウンドでコンテナを立ち上げ可能
+# -d をつけてバックグラウンドで起動
 docker-compose up -d
 ```
 
 ```
 # 起動中のコンテナの確認
 docker-compose ps
+```
+
+### 初回起動時のみ：コンテナへのアクセスしてDBを作成＆migrateを実施
+
+```
+# 起動中のコンテナの中に入る
+docker-compose exec web bash
+
+# DBを作成する
+rails db:create
+
+# migrateを実施
+rails db:migrate
+
+# コンテナから出る
+exit
 ```
 
 ### 動作確認
@@ -57,15 +71,6 @@ http://localhost:3000
 にアクセスできるか確認  
 アクセスできたら成功
 
-### コンテナへのアクセス
-
-```
-# 起動中のコンテナの中に入る
-docker-compose exec web bash
-
-# コンテナから出る
-exit
-```
 
 ### コンテナの停止
 
