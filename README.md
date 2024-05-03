@@ -15,7 +15,7 @@ rails-docker
 
 ## プロジェクトについて
 
-Docker のコンポーネント上で Ruby on Rails を立ち上げます
+Docker のコンポーネント上で Ruby on Rails を立ち上げる
 
 ## 環境
 
@@ -25,7 +25,7 @@ Docker のコンポーネント上で Ruby on Rails を立ち上げます
 | Ruby on rails        | 7.0.6      |
 | PostgresSQL          | 12         |
 
-その他のパッケージのバージョンは Gemfile を参照してください。
+その他のパッケージのバージョンは Gemfile を参照
 
 ## 開発環境構築
 
@@ -39,7 +39,7 @@ git clone git@github.com:umedanaoyuki/rails-docker.git
 # コンテナ作成＆起動
 docker-compose up
 
-# -d をつけるとバックグラウンドでコンテナを立ち上げ可能です。
+# -d をつけるとバックグラウンドでコンテナを立ち上げ可能
 docker-compose up -d
 ```
 
@@ -55,7 +55,7 @@ http://localhost:3000
 ```
 
 にアクセスできるか確認  
-アクセスできたら成功です。
+アクセスできたら成功
 
 ### コンテナへのアクセス
 
