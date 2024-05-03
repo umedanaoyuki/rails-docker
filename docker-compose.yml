@@ -21,13 +21,7 @@ services:
       - db
 
   db:
-    # platform: linux/x86_64
     image: postgres:12
-    # environment:
-    #   POSTGRES_USER: "user"
-    #   POSTGRES_PASSWORD: "postgres"
-    # ports:
-    #   - "3306:3306"
     volumes:
       - db-data:/var/lib/postgresql/data
     environment:
