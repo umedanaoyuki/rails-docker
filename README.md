@@ -33,6 +33,13 @@ Docker のコンポーネント上で Ruby on Rails を立ち上げる
 git clone git@github.com:umedanaoyuki/rails-docker.git
 ```
 
+### 初回起動時のみ実施
+
+```
+# webのコンテナを起動して rails db:createを実行後、コンテナを削除
+docker-compose run --rm web  rails db:create
+```
+
 ### コンテナ作成・起動
 
 ```
@@ -46,22 +53,6 @@ docker-compose up -d
 docker-compose ps
 ```
 
-### 初回起動時のみ：コンテナへのアクセスしてDBを作成＆migrateを実施
-
-```
-# 起動中のコンテナの中に入る
-docker-compose exec web bash
-
-# DBを作成する
-rails db:create
-
-# migrateを実施
-rails db:migrate
-
-# コンテナから出る
-exit
-```
-
 ### 動作確認
 
 ```
@@ -70,7 +61,6 @@ http://localhost:3000
 
 にアクセスできるか確認  
 アクセスできたら成功
-
 
 ### コンテナの停止
 
