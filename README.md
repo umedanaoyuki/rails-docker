@@ -36,7 +36,7 @@ git clone git@github.com:umedanaoyuki/rails-docker.git
 ### 初回起動時のみ実施
 
 ```
-# webのコンテナを起動して rails db:createを実行後、コンテナを削除
+# webのコンテナを起動して rails db:createを実行（コンテナは削除される）
 docker-compose run --rm web  rails db:create
 ```
 
